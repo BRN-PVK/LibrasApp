@@ -23,7 +23,8 @@ const RegisterScreen: React.FC<Props> = ({ navigation: { navigate } }) => {
     <SafeAreaView>
       <View
         style={{
-          padding: Spacing * 2,
+          marginTop: Spacing * 6.8,
+          padding: Spacing * 2
         }}
       >
         <View
@@ -58,8 +59,8 @@ const RegisterScreen: React.FC<Props> = ({ navigation: { navigate } }) => {
           }}
         >
           <AppTextInput placeholder="Email" />
-          <AppTextInput placeholder="Password" />
-          <AppTextInput placeholder="Confirm Password" />
+          <AppTextInput placeholder="Senha" />
+          <AppTextInput placeholder="Confirmar senha" />
         </View>
 
         <TouchableOpacity
@@ -85,7 +86,7 @@ const RegisterScreen: React.FC<Props> = ({ navigation: { navigate } }) => {
               fontSize: FontSize.large,
             }}
           >
-            Sign up
+            Cadastrar
           </Text>
         </TouchableOpacity>
         <TouchableOpacity
@@ -119,59 +120,8 @@ const RegisterScreen: React.FC<Props> = ({ navigation: { navigate } }) => {
               fontSize: FontSize.small,
             }}
           >
-            Ou continue com
+           
           </Text>
-
-          <View
-            style={{
-              marginTop: Spacing,
-              flexDirection: "row",
-              justifyContent: "center",
-            }}
-          >
-            <TouchableOpacity
-              style={{
-                padding: Spacing,
-                backgroundColor: Colors.gray,
-                borderRadius: Spacing / 2,
-                marginHorizontal: Spacing,
-              }}
-            >
-              <Ionicons
-                name="logo-google"
-                color={Colors.text}
-                size={Spacing * 2}
-              />
-            </TouchableOpacity>
-            <TouchableOpacity
-              style={{
-                padding: Spacing,
-                backgroundColor: Colors.gray,
-                borderRadius: Spacing / 2,
-                marginHorizontal: Spacing,
-              }}
-            >
-              <Ionicons
-                name="logo-apple"
-                color={Colors.text}
-                size={Spacing * 2}
-              />
-            </TouchableOpacity>
-            <TouchableOpacity
-              style={{
-                padding: Spacing,
-                backgroundColor: Colors.gray,
-                borderRadius: Spacing / 2,
-                marginHorizontal: Spacing,
-              }}
-            >
-              <Ionicons
-                name="logo-facebook"
-                color={Colors.text}
-                size={Spacing * 2}
-              />
-            </TouchableOpacity>
-          </View>
         </View>
       </View>
     </SafeAreaView>

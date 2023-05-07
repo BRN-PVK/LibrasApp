@@ -23,7 +23,8 @@ const LoginScreen: React.FC<Props> = ({ navigation: { navigate } }) => {
     <SafeAreaView>
       <View
         style={{
-          padding: Spacing * 2,
+          marginTop: Spacing * 10,
+          padding: Spacing * 2
         }}
       >
         <View
@@ -39,17 +40,17 @@ const LoginScreen: React.FC<Props> = ({ navigation: { navigate } }) => {
               marginVertical: Spacing * 3,
             }}
           >
-            Login here
+            Login
           </Text>
           <Text
             style={{
               fontFamily: Font["poppins-semiBold"],
               fontSize: FontSize.large,
-              maxWidth: "60%",
+              maxWidth: "70%",
               textAlign: "center",
             }}
           >
-            Welcome back you've been missed!
+            Olá, sentimos sua falta! Seja bem-vindo de volta.
           </Text>
         </View>
         <View
@@ -58,7 +59,7 @@ const LoginScreen: React.FC<Props> = ({ navigation: { navigate } }) => {
           }}
         >
           <AppTextInput placeholder="Email" />
-          <AppTextInput placeholder="Password" />
+          <AppTextInput placeholder="Senha" />
         </View>
 
         <View>
@@ -70,7 +71,7 @@ const LoginScreen: React.FC<Props> = ({ navigation: { navigate } }) => {
               alignSelf: "flex-end",
             }}
           >
-            Forgot your password ?
+            Esqueceu sua senha ?
           </Text>
         </View>
 
@@ -97,7 +98,7 @@ const LoginScreen: React.FC<Props> = ({ navigation: { navigate } }) => {
               fontSize: FontSize.large,
             }}
           >
-            Sign in
+            Entrar
           </Text>
         </TouchableOpacity>
         <TouchableOpacity
@@ -114,7 +115,7 @@ const LoginScreen: React.FC<Props> = ({ navigation: { navigate } }) => {
               fontSize: FontSize.small,
             }}
           >
-            Create new account
+            Criar nova conta
           </Text>
         </TouchableOpacity>
 
