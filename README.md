@@ -1,4 +1,9 @@
 # Libras App
+
+## Imagens do aplicativo
+
+Tela inicial, login e cadastro.
+
 <p align = "center">
   <img src="https://i.imgur.com/OizfZnH.jpg" width="210" height="467">
   &nbsp&nbsp&nbsp
