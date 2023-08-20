@@ -10,7 +10,8 @@ Tela inicial, login e cadastro.
   <img src="https://i.imgur.com/Uc735xa.png" width="225" height="500">
   &nbsp&nbsp&nbsp
   <img src="https://i.imgur.com/e10VEam.png" width="225" height="500">
-  &nbsp&nbsp&nbsp
+</p>
+<p>
   <img src="https://i.imgur.com/0OvtZE0.png" width="225" height="500">
   &nbsp&nbsp&nbsp
   <img src="https://i.imgur.com/sQpquWI.png" width="225" height="500">
