@@ -2,8 +2,6 @@
 
 ## Imagens do aplicativo
 
-Tela inicial, login e cadastro.
-
 <p>
   <img src="https://i.imgur.com/uWUq2eI.png" width="225" height="500">
   &nbsp&nbsp&nbsp
