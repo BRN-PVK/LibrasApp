@@ -7,6 +7,7 @@ import Register from "../Screens/Register";
 import Main from "../Screens/Main";
 import Highscore from "../Screens/InnerScreens/Highscore";
 import Credits from "../Screens/InnerScreens/Credits";
+import Alfabetos from "../Screens/Lessons/Alfabetos";
 import { useGlobalContext } from "./Context";
 import NoInternetConnection from "../Screens/NoInternetConnection";
 import { useEffect } from "react";
@@ -76,6 +77,11 @@ const Navigations = () => {
           <Stack.Screen
             name="Credits"
             component={Credits}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="Alfabetos"
+            component={Alfabetos}
             options={{ headerShown: false }}
           />
         </>

@@ -20,7 +20,7 @@ const AppProvider = ({ children }) => {
       navigation.navigate("Main");
       setuser(user);
     } else {
-      navigation.navigate("Home");
+      navigation.navigate("Login");
       setuser(null);
     }
   });
@@ -31,7 +31,7 @@ const AppProvider = ({ children }) => {
         navigation.navigate("Main");
         setuser(user);
       } else {
-        navigation.navigate("Home");
+        navigation.navigate("Login");
         setuser(null);
       }
     });
@@ -69,7 +69,7 @@ const AppProvider = ({ children }) => {
         navigation.navigate("Main");
       } else {
         setuser(null);
-        navigation.navigate("Home");
+        navigation.navigate("Login");
       }
     } catch (e) {
       console.log(e);

@@ -20,7 +20,7 @@ const Category = ({ img, txt, api, navigation }) => {
   );
 };
 
-export default Category;
+export default (Category);
 
 const styles = StyleSheet.create({
   Cat: {

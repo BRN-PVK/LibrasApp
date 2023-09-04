@@ -1,20 +1,37 @@
-import { StyleSheet, Text, View } from "react-native";
+import { Image, TouchableOpacity, StyleSheet, Text, View } from "react-native";
 import React from "react";
 import Category from "./Category";
 
 const CategoryList = ({ navigation }) => {
+
+  const AlfabetosAtalho = ({ img, txt, navigation }) => {
+    return (
+      <TouchableOpacity
+        style={styles.Cat}
+        onPress={() => {
+          navigation.navigate("Alfabetos", { txt: txt });
+        }}
+      >
+        <Image
+          source={{
+            uri: img,
+          }}
+          style={{ height: 80, width: 90 }}
+        />
+        <Text style={styles.CatTxt}>{txt}</Text>
+      </TouchableOpacity>
+    );
+  };
+
   return (
     <View style={styles.quizCat}>
       <Text style={styles.quizCatTitle}>Atalhos</Text>
       <View style={styles.quizCatDiv}>
-        <Category
+        <AlfabetosAtalho
           img={
-            "https://i.imgur.com/eU5FIIW.png"
+            "https://i.imgur.com/DmLYxdd.png"
           }
-          txt="Texto 1"
-          api={
-            "https://opentdb.com/api.php?amount=10&category=23&type=multiple&encode=url3986"
-          }
+          txt="Alfabeto"
           navigation={navigation}
         />
         <Category
@@ -69,6 +86,17 @@ const CategoryList = ({ navigation }) => {
 export default CategoryList;
 
 const styles = StyleSheet.create({
+  Cat: {
+    backgroundColor: "white",
+    borderRadius: 10,
+    alignItems: "center",
+    padding: 5,
+  },
+
+  CatTxt: {
+    fontWeight: "500",
+    paddingVertical: 5,
+  },
   quizCat: {
     paddingHorizontal: 16,
   },
