@@ -8,6 +8,7 @@ import Main from "../Screens/Main";
 import Highscore from "../Screens/InnerScreens/Highscore";
 import Credits from "../Screens/InnerScreens/Credits";
 import Alfabetos from "../Screens/Lessons/Alfabetos";
+import Cores from "../Screens/Lessons/Cores";
 import { useGlobalContext } from "./Context";
 import NoInternetConnection from "../Screens/NoInternetConnection";
 import { useEffect } from "react";
@@ -82,6 +83,11 @@ const Navigations = () => {
           <Stack.Screen
             name="Alfabetos"
             component={Alfabetos}
+            options={{ headerShown: false }}
+          />
+                    <Stack.Screen
+            name="Cores"
+            component={Cores}
             options={{ headerShown: false }}
           />
         </>

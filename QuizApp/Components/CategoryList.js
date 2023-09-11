@@ -23,6 +23,25 @@ const CategoryList = ({ navigation }) => {
     );
   };
 
+  const CoresAtalho = ({ img, txt, navigation }) => {
+    return (
+      <TouchableOpacity
+        style={styles.Cat}
+        onPress={() => {
+          navigation.navigate("Cores", { txt: txt });
+        }}
+      >
+        <Image
+          source={{
+            uri: img,
+          }}
+          style={{ height: 80, width: 90 }}
+        />
+        <Text style={styles.CatTxt}>{txt}</Text>
+      </TouchableOpacity>
+    );
+  };
+
   return (
     <View style={styles.quizCat}>
       <Text style={styles.quizCatTitle}>Atalhos</Text>
@@ -34,14 +53,15 @@ const CategoryList = ({ navigation }) => {
           txt="Alfabeto"
           navigation={navigation}
         />
-        <Category
-          img="https://i.imgur.com/eU5FIIW.png"
-          txt="Texto 2"
-          api={
-            "https://opentdb.com/api.php?amount=10&category=17&type=multiple&encode=url3986"
+
+        <CoresAtalho
+          img={
+            "https://i.imgur.com/ftvQgir.png"
           }
+          txt="Cores"
           navigation={navigation}
         />
+
         <Category
           img="https://i.imgur.com/eU5FIIW.png"
           txt="Texto 3"

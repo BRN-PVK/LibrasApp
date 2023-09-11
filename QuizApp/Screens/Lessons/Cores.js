@@ -15,7 +15,7 @@ import {
   import YoutubePlayer from "react-native-youtube-iframe";
   import TopBar from "../../Components/TopBar";
   
-  const Alfabetos = (image, txt, navigation) => {
+  const Cores = (image, txt, navigation) => {
     const [playing, setPlaying] = useState(false);
 
     const onStateChange = useCallback((state) => {
@@ -31,44 +31,46 @@ import {
 
     return (
       <ScrollView style={styles.container}>
-        <TopBar title={"Alfabeto"} />
+        <TopBar title={"Cores"} />
   
         <View style={styles.body}>
-          <Text style={styles.nothTxtl}>Assista a vídeo-aula a seguir e aprenda os sinais do alfabeto em Libras.</Text>
+          <Text style={styles.nothTxtl}>Assista a vídeo-aula a seguir e aprenda os sinais de cada cor em Libras.</Text>
+
           <View>
-          <YoutubePlayer
-          height={200}
-          play={playing}
-          videoId={"agMu-DIVpvI"}
-          onChangeState={onStateChange}
-          />
-          </View>
-      <View style={styles.noth}>
-        <Image
-          resizeMode="contain"
-          source={{
-            uri: "https://i.imgur.com/6x9HO8P.jpg",
-          }}
-          style={{ width: 300, height: 300 }}
-        />
-
-        <Text style={styles.nothTxt}>Teste seus conhecimentos acessando o quiz no botão abaixo:</Text>
-
-        <TouchableOpacity
-          style={styles.optionBtn}
-          onPress={() => {
-            Linking.openURL("https://github.com/BRN-PVK/LibrasApp");
-          }}
-        >
-        <Text style={styles.option}>Acessar Quiz</Text>
-        </TouchableOpacity>
-      </View>
+      <YoutubePlayer
+        height={200}
+        play={playing}
+        videoId={"agMu-DIVpvI"}
+        onChangeState={onStateChange}
+      />
     </View>
+
+          <View style={styles.noth}>
+            <Image
+              resizeMode="contain"
+              source={{
+                uri: "https://i.imgur.com/6x9HO8P.jpg",
+              }}
+              style={{ width: 300, height: 300 }}
+            />
+
+            <Text style={styles.nothTxt}>Teste seus conhecimentos acessando o quiz no botão abaixo:</Text>
+
+            <TouchableOpacity
+              style={styles.optionBtn}
+              onPress={() => {
+                Linking.openURL("https://github.com/BRN-PVK/LibrasApp");
+              }}
+            >
+              <Text style={styles.option}>Acessar Quiz</Text>
+            </TouchableOpacity>
+          </View>
+        </View>
       </ScrollView>
     );
   };
   
-  export default Alfabetos;
+  export default Cores;
   
   const styles = StyleSheet.create({
 
