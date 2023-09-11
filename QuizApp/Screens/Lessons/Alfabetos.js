@@ -7,18 +7,45 @@ import {
     StyleSheet,
     Text,
     TouchableOpacity,
+    Button,
+    Alert,
     View,
   } from "react-native";
-  import React from "react";
-  
+  import React, { useState, useCallback, useRef} from "react";
+  import YoutubePlayer from "react-native-youtube-iframe";
   import TopBar from "../../Components/TopBar";
   
   const Alfabetos = (image, txt, navigation) => {
+    const [playing, setPlaying] = useState(false);
+
+    const onStateChange = useCallback((state) => {
+      if (state === "ended") {
+        setPlaying(false);
+        Alert.alert("O video terminou!");
+      }
+    }, []);
+
+    const togglePlaying = useCallback(() => {
+      setPlaying((prev) => !prev);
+    }, []);
+
     return (
       <ScrollView style={styles.container}>
         <TopBar title={"Alfabeto Libras"} />
   
         <View style={styles.body}>
+          <Text style={styles.nothTxtl}>Assista a vídeo-aula a seguir e aprenda os sinais do alfabeto em Libras.</Text>
+
+          <View>
+      <YoutubePlayer
+        height={200}
+        play={playing}
+        videoId={"iee2TATGMyI"}
+        onChangeState={onStateChange}
+      />
+    </View>
+
+
           <View style={styles.noth}>
             <Image
               resizeMode="contain"
@@ -27,7 +54,9 @@ import {
               }}
               style={{ width: 300, height: 300 }}
             />
-            <Text style={styles.nothTxt}>Teste seus conhecimentos no quiz abaixo:</Text>
+
+            <Text style={styles.nothTxt}>Teste seus conhecimentos acessando o quiz no botão abaixo:</Text>
+
             <TouchableOpacity
               style={styles.optionBtn}
               onPress={() => {
@@ -85,8 +114,13 @@ import {
       fontSize: 19,
       fontWeight: "500",
       textAlign: "center",
-      fontStyle: "italic",
       marginVertical: 20,
     },
+    nothTxtl: {
+      fontSize: 19,
+      fontWeight: "500",
+      textAlign: "justify",
+      marginVertical: 20,
+    }
   });
   
