@@ -9,6 +9,10 @@ import Highscore from "../Screens/InnerScreens/Highscore";
 import Credits from "../Screens/InnerScreens/Credits";
 import Alfabetos from "../Screens/Lessons/Alfabetos";
 import Cores from "../Screens/Lessons/Cores";
+import Numeros from "../Screens/Lessons/Numeros";
+import Cumprimento from "../Screens/Lessons/Cumprimento";
+import CarPessoais from "../Screens/Lessons/CarPessoais";
+import CarPsicologicas from "../Screens/Lessons/CarPsicologicas";
 import { useGlobalContext } from "./Context";
 import NoInternetConnection from "../Screens/NoInternetConnection";
 import { useEffect } from "react";
@@ -85,9 +89,29 @@ const Navigations = () => {
             component={Alfabetos}
             options={{ headerShown: false }}
           />
-                    <Stack.Screen
+          <Stack.Screen
             name="Cores"
             component={Cores}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="Números"
+            component={Numeros}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="Cumprimento"
+            component={Cumprimento}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="Características Pessoais"
+            component={CarPessoais}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="Características Psicológicas"
+            component={CarPsicologicas}
             options={{ headerShown: false }}
           />
         </>

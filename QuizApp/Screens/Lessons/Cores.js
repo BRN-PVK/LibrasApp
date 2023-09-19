@@ -37,23 +37,14 @@ import {
           <Text style={styles.nothTxtl}>Assista a vídeo-aula a seguir e aprenda os sinais de cada cor em Libras.</Text>
 
           <View>
-      <YoutubePlayer
-        height={200}
-        play={playing}
-        videoId={"agMu-DIVpvI"}
-        onChangeState={onStateChange}
-      />
-    </View>
-
-          <View style={styles.noth}>
-            <Image
-              resizeMode="contain"
-              source={{
-                uri: "https://i.imgur.com/6x9HO8P.jpg",
-              }}
-              style={{ width: 300, height: 300 }}
+            <YoutubePlayer
+              height={200}
+              play={playing}
+              videoId={"aZD6jV_iX1o"}
+              onChangeState={onStateChange}
             />
-
+          </View>
+          <View style={styles.noth}>
             <Text style={styles.nothTxt}>Teste seus conhecimentos acessando o quiz no botão abaixo:</Text>
 
             <TouchableOpacity
