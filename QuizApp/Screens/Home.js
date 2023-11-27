@@ -34,7 +34,7 @@ const Home = ({ navigation }) => {
         />
 
         <View style={styles.caption}>
-          <Text style={styles.captionTitile}>LibrasApp</Text>
+          <Text style={styles.captionTitile}>SinaLibras</Text>
           <Text style={styles.captionTxt}>
           Aprenda Libras e faça o mundo ser um lugar mais acessível.
           </Text>
